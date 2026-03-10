@@ -9,6 +9,9 @@ Build Docker images with specified busybox utilities with ease.
 - `VERSION_TOOLCHAIN` (bleeding-edge-2025.08-1) - Bootlin toolchain version
 - `UTILS` - space separated busybox utilities to include (hush shell is always included)
 
+## Build tool script
+`.\build-tool.ps1` changes entrypoint to the first item in `--build-arg UTILS=...`.
+
 ## See also
 - [PrivateBin/docker-chown](https://github.com/PrivateBin/docker-chown)
 - [Qwer-TeX/minibox](https://github.com/Qwer-TeX/minibox)
