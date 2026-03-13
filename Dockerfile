@@ -20,6 +20,7 @@ RUN make allnoconfig
 RUN sed -i 's/# CONFIG_STATIC is not set/CONFIG_STATIC=y/' .config && \
     sed -i 's/# CONFIG_LFS is not set/CONFIG_LFS=y/' .config && \
     sed -i 's/# CONFIG_BUSYBOX is not set/CONFIG_BUSYBOX=y/' .config && \
+    sed -i 's/# CONFIG_SHOW_USAGE is not set/CONFIG_SHOW_USAGE=y/' .config && \
     sed -i 's/CONFIG_SH_IS_ASH=y/# CONFIG_SH_IS_ASH is not set/' .config && \
     sed -i 's/# CONFIG_SH_IS_NONE is not set/CONFIG_SH_IS_NONE=y/' .config && \
     # Navigation (history, tab completion)
