@@ -3,7 +3,7 @@ Build Docker images with specified busybox utilities with ease.
 
 ## Build args
 - `VERSION_BUSYBOX` (1.37.0) - busybox version to build
-- `ARCH` (**x86-64**, x86-i686, [...](https://toolchains.bootlin.com/toolchains.html)) - CPU architecture
+- `ARCH` (**x86-64-v2**, x86-i686, [...](https://toolchains.bootlin.com/toolchains.html)) - CPU architecture
 - `CLIB` (uclibc, **musl**, glibc) - C library
 - `VERSION_TOOLCHAIN` (bleeding-edge-2025.08-1) - Bootlin toolchain version
 - `APPLETS` - space separated busybox utilities to include
