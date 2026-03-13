@@ -1,5 +1,6 @@
 # Busybox Image Builder
-Build Docker images with specified busybox utilities with ease.
+Build Docker images with a specified subset of busybox applets easily.
+The project allows to build very small images under 100KB.
 
 ## Build args
 - `VERSION_BUSYBOX` (1.37.0) - busybox version to build
@@ -9,7 +10,7 @@ Build Docker images with specified busybox utilities with ease.
 - `APPLETS` - space separated busybox utilities to include
 
 ## Build tool script
-`.\build-tool.ps1` changes entrypoint to the first item in `--build-arg APPLETS=...`.
+`.\build-tool.ps1` changes entrypoint from `/bin/busybox` to the first item in `--build-arg APPLETS=...`.
 
 ## See also
 - [PrivateBin/docker-chown](https://github.com/PrivateBin/docker-chown)
