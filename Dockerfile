@@ -59,4 +59,4 @@ RUN export CROSS_COMPILE="$(basename /build/$ARCH--$CLIB--$VERSION_TOOLCHAIN/*-b
 
 FROM scratch
 COPY --from=builder /build/rootfs /
-ENTRYPOINT ["/bin/sh"]
+ENTRYPOINT ["/bin/busybox"]
