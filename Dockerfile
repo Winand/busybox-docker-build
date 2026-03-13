@@ -1,11 +1,8 @@
-ARG VERSION_BUSYBOX="1.37.0"
-
 FROM debian:13-slim AS builder
 # host gcc is used for building utilities during cross-compilation process
 RUN apt-get update && apt-get install -y curl xz-utils bzip2 make gcc
 
 WORKDIR /build
-ARG VERSION_BUSYBOX
 # bootlin toolchain (glibc, musl, uclibc)
 ARG ARCH="x86-64-v2"
 ARG CLIB="musl"
@@ -14,6 +11,7 @@ ARG VERSION_TOOLCHAIN="bleeding-edge-2025.08-1"
 RUN curl -L https://toolchains.bootlin.com/downloads/releases/toolchains/$ARCH/tarballs/$ARCH--$CLIB--$VERSION_TOOLCHAIN.tar.xz | tar -xJ
 ENV PATH="/build/$ARCH--$CLIB--$VERSION_TOOLCHAIN/bin:$PATH"
 
+ARG VERSION_BUSYBOX="1.37.0"
 RUN curl -L https://busybox.net/downloads/busybox-$VERSION_BUSYBOX.tar.bz2 | tar -xj
 WORKDIR /build/busybox-$VERSION_BUSYBOX
 
